@@ -9,7 +9,15 @@
 
 
 void hotfix(){
+
 	printf("This is a hotfix\n");
+}
+
+void printUser(){
+
+	printf("Name: Rui Vaz\n");
+	printf("Email: rui.wax@gmail.com\n");
+
 }
 
 node_t* newNode(int value){
@@ -226,5 +234,6 @@ int main(){
         printTree3(root);
 	printf("\n%d\n", hasPathSum2(root,9));
 	hotfix();
+	printUser();
 return 0;
 }
