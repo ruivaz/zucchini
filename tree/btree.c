@@ -8,6 +8,9 @@
  * */
 
 
+void hotfix(){
+	printf("This is a hotfix\n");
+}
 
 node_t* newNode(int value){
 	node_t *node = malloc(sizeof(node_t));
@@ -222,6 +225,6 @@ int main(){
         printf("\n");
         printTree3(root);
 	printf("\n%d\n", hasPathSum2(root,9));
-
+	hotfix();
 return 0;
 }
