@@ -20,6 +20,10 @@ void printUser(){
 
 }
 
+void remoteBranch(){
+	printf("This methods was added in the remote brach\n");
+}
+
 node_t* newNode(int value){
 	node_t *node = malloc(sizeof(node_t));
 	node->value=value;
@@ -235,5 +239,6 @@ int main(){
 	printf("\n%d\n", hasPathSum2(root,9));
 	hotfix();
 	printUser();
+	remoteBranch();
 return 0;
 }
