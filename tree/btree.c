@@ -227,6 +227,6 @@ int main(){
         printf("\n");
         printTree3(root);
 	printf("\n%d\n", hasPathSum2(root,9));
-
+	printUser();
 return 0;
 }
