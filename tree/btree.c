@@ -8,6 +8,11 @@
  * */
 
 
+void printUser(){
+
+	printf("Name: Rui Vaz\n");
+	printf("Email: rui.wax@gmail.com\n");
+}
 
 node_t* newNode(int value){
 	node_t *node = malloc(sizeof(node_t));
