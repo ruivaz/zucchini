@@ -8,6 +8,15 @@
  * */
 
 
+node_t* newNode(int value){
+        node_t *node = malloc(sizeof(node_t));
+        node->value=value;
+        node->left=NULL;
+        node->right=NULL;
+
+        return node;
+}
+
 
 int  searchValue(node_t *root, int value){
 	
@@ -198,6 +207,34 @@ int hasPathSum2(node_t *root, int sum) {
      } 
        
 } 
+
+void printPathsRecur(node_t *node, int path[], int pathLen){
+        if(node==NULL){
+               int i;
+               printf("Path: ");
+               for(i=0;i<pathLen;i++){
+                       printf("%d ",path[i]);
+	       }
+	       return;
+        }
+	else{
+		path[pathLen]=node->value;
+		pathLen+=1;
+		printPathsRecur(node->left, path, pathLen);
+		printPathsRecur(node->right, path, pathLen);
+	}
+}
+
+void printPaths(node_t *root) {
+	int pathLen=0;
+	int path[50];
+
+	if(root==NULL)
+		return;
+	else
+		printPathsRecur(root, path, pathLen);
+}
+
                                     
 
 int main(){
@@ -213,5 +250,6 @@ int main(){
         printf("\n");
         printTree3(root);
 	printf("\n%d\n", hasPathSum2(root,9));
+	printPaths(root);
 return 0;
 }
