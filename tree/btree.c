@@ -8,30 +8,6 @@
  * */
 
 
-void hotfix(){
-
-	printf("This is a hotfix\n");
-}
-
-void printUser(){
-
-	printf("Name: Rui Vaz\n");
-	printf("Email: rui.wax@gmail.com\n");
-
-}
-
-void remoteBranch(){
-	printf("This methods was added in the remote brach\n");
-}
-
-node_t* newNode(int value){
-	node_t *node = malloc(sizeof(node_t));
-	node->value=value;
-	node->left=NULL;
-	node->right=NULL;
-	
-	return node;
-}
 
 int  searchValue(node_t *root, int value){
 	
@@ -237,8 +213,5 @@ int main(){
         printf("\n");
         printTree3(root);
 	printf("\n%d\n", hasPathSum2(root,9));
-	hotfix();
-	printUser();
-	remoteBranch();
 return 0;
 }
